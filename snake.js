@@ -10,6 +10,7 @@ const WEST = 'west';
 class Snake {
   constructor() {
     // TODO - make this a random start
+    // TODO - how to maintain the first as the head and the last as the tail?
     this.coordinates = [
       {
         x: 0,
@@ -47,5 +48,16 @@ class Snake {
       this.y_progression = 0;
     }
     return;
+  }
+  
+  addLength() {
+    var current_tail = this.coordinates[this.coordinates.length-1]
+    var newTail = {
+      x: current_tail.x - (this.x_progression),
+      y: current_tail.y - (this.y_progression),
+    }
+    
+    this.coordinates.push(newTail);
+    return this.coordinates
   }
 }
