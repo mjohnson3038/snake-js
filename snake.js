@@ -23,13 +23,17 @@ class Snake {
   }
 
   move() {
-    var that = this;
-    this.coordinates = that.coordinates.map(function(coordinate){
-      return {
-        x: coordinate.x + that.x_progression,
-        y: coordinate.y + that.y_progression,
-      }
-    })
+    let coordinates = this.coordinates;
+    let current_head = coordinates[0]
+    let new_head = {
+      x: current_head.x + this.x_progression,
+      y: current_head.y + this.y_progression,
+    }
+
+    coordinates.unshift(new_head)
+    coordinates.pop()
+
+    this.coordinates = coordinates;
     return this.coordinates
   }
 
