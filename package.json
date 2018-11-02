@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mjohnson3038/snake-js/issues"
   },
-  "homepage": "https://github.com/mjohnson3038/snake-js#readme"
+  "homepage": "https://github.com/mjohnson3038/snake-js#readme",
+  "dependencies": {
+    "jasmine-node": "^1.16.2"
+  }
 }
