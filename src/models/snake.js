@@ -7,8 +7,8 @@ const SOUTH = 'south';
 const EAST = 'east';
 const WEST = 'west';
 
-export default class Snake {
-  constructor() {
+class Snake {
+  constructor(x_progression=-1, y_progression=0) {
     // TODO - make this a random start
     // TODO - how to maintain the first as the head and the last as the tail?
     this.coordinates = [
@@ -18,8 +18,8 @@ export default class Snake {
       }
     ];
 
-    this.x_progression = -1;
-    this.y_progression = 0;
+    this.x_progression = x_progression;
+    this.y_progression = y_progression;
   }
 
   move() {
@@ -77,4 +77,8 @@ export default class Snake {
     }
     return false;
   }
+}
+
+module.exports = {
+  Snake: Snake,
 }
