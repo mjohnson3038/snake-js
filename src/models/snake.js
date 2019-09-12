@@ -7,7 +7,7 @@ const SOUTH = 'south';
 const EAST = 'east';
 const WEST = 'west';
 
-class Snake {
+export default class Snake {
   constructor() {
     // TODO - make this a random start
     // TODO - how to maintain the first as the head and the last as the tail?
